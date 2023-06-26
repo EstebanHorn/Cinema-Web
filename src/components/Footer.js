@@ -8,7 +8,7 @@ function Footer (){
                     </li>
                 </ul>
             </nav>
-            <p>© 2022 Alkemy Academy. All Rights Reserved.</p>
+            <p>© 2022 Cinema Kxrn. All Rights Reserved.</p>
         </footer>
     )
 }

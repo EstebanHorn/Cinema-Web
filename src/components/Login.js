@@ -30,7 +30,7 @@ function Login() {
       return;
     }
 
-    if (email !== "challenge@alkemy.org" || password !== "react") {
+    if (email !== "eve.holt@reqres.in" || password !== "cityslicka") {
       swal({
         icon: "error",
         title: "Datos erroneos",
@@ -39,7 +39,7 @@ function Login() {
     }
 
     axios
-      .post("http://challenge-react.alkemy.org", { email, password })
+      .post("https://reqres.in/api/login", { email, password })
       .then((res) => {
         swal({
           icon: "success",
@@ -54,7 +54,6 @@ function Login() {
   };
 
   let token = sessionStorage.getItem("token");
-
   return (
     <>
       {token && <Navigate to="/movies" />}
@@ -67,9 +66,13 @@ function Login() {
           className="font-ran space-y-4 md:space-y-6 py-2"
         >
           <div>
+            <div className="flex justify-between">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Correo electronico:
             </label>
+            <p className="text-red-800">eve.holt@reqres.in</p>
+            </div>
+            
             <input
               type="text"
               name="email"
@@ -78,9 +81,14 @@ function Login() {
             />
           </div>
           <div>
+          <div className="flex justify-between">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               <span>Contraseña: </span>
             </label>
+            <p className="text-red-800">cityslicka</p>
+
+            </div>
+            
             <input
               type="password"
               name="password"
